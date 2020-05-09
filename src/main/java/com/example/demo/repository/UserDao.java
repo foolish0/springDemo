@@ -9,6 +9,4 @@ public interface UserDao {
     int register(User user);
     //修改失败次数
     int change_failtimes(User user);
-    //
-
 }

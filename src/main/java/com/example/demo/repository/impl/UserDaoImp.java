@@ -5,14 +5,19 @@ import com.example.demo.repository.UserDao;
 
 public class UserDaoImp implements UserDao {
 
-    @Override
-    public int queryByName(User user) {
 
+    @Override
+    public int login(User user) {
         return 0;
     }
 
     @Override
-    public int checkUser(User user) {
+    public int register(User user) {
+        return 0;
+    }
+
+    @Override
+    public int change_failtimes(User user) {
         return 0;
     }
 }
