@@ -39,4 +39,8 @@ public class StudentServiceImp implements StudentService {
     public Map<String, Object> queryStudentBysno(String sno) {
         return this.studentDao.queryStudentBysno(sno);
     }
+
+    public void print(){
+        System.out.println("12312312");
+    }
 }
