@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author lizhenjiang
+ */
 @Service("StudentService")
 public class StudentServiceImp implements StudentService {
 
@@ -17,7 +20,7 @@ public class StudentServiceImp implements StudentService {
 
     @Override
     public int add(Student student) {
-        return this.studentDao.add(student);
+        return studentDao.add(student);
     }
 
     @Override
@@ -27,20 +30,16 @@ public class StudentServiceImp implements StudentService {
 
     @Override
     public int update(Student student) {
-        return this.studentDao.update(student);
+        return studentDao.update(student);
     }
 
     @Override
     public List<Map<String, Object>> queryStudentListMap() {
-        return this.studentDao.queryStudentListMap();
+        return studentDao.queryStudentListMap();
     }
 
     @Override
     public Map<String, Object> queryStudentBysno(String sno) {
-        return this.studentDao.queryStudentBysno(sno);
-    }
-
-    public void print(){
-        System.out.println("12312312");
+        return studentDao.queryStudentBysno(sno);
     }
 }

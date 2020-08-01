@@ -1,20 +1,20 @@
 package com.example.demo;
 
-//import org.springframework.boot.Banner;
+import net.hasor.spring.boot.EnableHasor;
+import net.hasor.spring.boot.EnableHasorWeb;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+/**
+ * @author lizhenjiang
+ */
+@EnableHasor()
+@EnableHasorWeb()
+@SpringBootApplication(scanBasePackages = {"com.example"})
 public class DemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(DemoApplication.class);
-        //关闭banner
-        //app.setBannerMode(Banner.Mode.OFF);
-        //不允许命令行修改项目配置
-        app.setAddCommandLineProperties(false);
-        app.run(args);
-        //SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(DemoApplication.class, args);
     }
 
 }
