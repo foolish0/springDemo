@@ -5,6 +5,9 @@ import com.example.demo.domain.Student;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author lizhenjiang
+ */
 public interface StudentDao {
     int add(Student student);
     int deleteBysno(String sno);
