@@ -1,6 +1,6 @@
 package com.example.demo.repository;
 
-import com.example.demo.domain.Student;
+import com.example.demo.entity.Student;
 
 import java.util.List;
 import java.util.Map;

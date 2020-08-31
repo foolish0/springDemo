@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.domain.Student;
+import com.example.demo.entity.Student;
 import com.example.demo.repository.StudentDao;
 import com.example.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;

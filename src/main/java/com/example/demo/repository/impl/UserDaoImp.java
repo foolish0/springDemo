@@ -1,6 +1,6 @@
 package com.example.demo.repository.impl;
 
-import com.example.demo.domain.User;
+import com.example.demo.entity.User;
 import com.example.demo.repository.UserDao;
 
 /**

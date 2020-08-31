@@ -1,4 +1,4 @@
-package com.example.demo.domain;
+package com.example.demo.entity;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -21,6 +21,10 @@ public class Student implements Serializable {
      */
     private String ssex;
     /**
+     * 年龄
+     */
+    private Integer age;
+    /**
      * 学生生日
      */
     private Date sbirthday;
@@ -28,6 +32,13 @@ public class Student implements Serializable {
      * 学生班级
      */
     private String classno;
+
+    public Student(){}
+
+    public Student(String sname, Integer age) {
+        this.age = age;
+        this.sname = sname;
+    }
 
     public void setSname(String sname) {
         this.sname = sname;
@@ -67,5 +78,13 @@ public class Student implements Serializable {
 
     public String getClassno() {
         return classno;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }
