@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.example.demo.democode.repository;
 
-import com.example.demo.entity.User;
+import com.example.demo.democode.entity.User;
 
 public interface UserDao {
     /**

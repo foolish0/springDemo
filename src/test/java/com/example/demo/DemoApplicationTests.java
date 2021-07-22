@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.entity.Student;
+import com.example.demo.democode.entity.Student;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.kie.api.KieServices;
