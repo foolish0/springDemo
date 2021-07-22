@@ -1,7 +1,7 @@
-package com.example.demo.repository.impl;
+package com.example.demo.democode.repository.impl;
 
-import com.example.demo.domain.Student;
-import com.example.demo.repository.StudentDao;
+import com.example.demo.democode.entity.Student;
+import com.example.demo.democode.repository.StudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 //import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;

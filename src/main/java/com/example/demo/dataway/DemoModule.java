@@ -1,4 +1,4 @@
-package com.example.dataway;
+package com.example.demo.dataway;
 
 import net.hasor.core.ApiBinder;
 import net.hasor.core.DimModule;

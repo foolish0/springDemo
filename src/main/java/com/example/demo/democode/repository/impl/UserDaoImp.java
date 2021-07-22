@@ -1,7 +1,7 @@
-package com.example.demo.repository.impl;
+package com.example.demo.democode.repository.impl;
 
-import com.example.demo.domain.User;
-import com.example.demo.repository.UserDao;
+import com.example.demo.democode.entity.User;
+import com.example.demo.democode.repository.UserDao;
 
 /**
  * @author lizhenjiang

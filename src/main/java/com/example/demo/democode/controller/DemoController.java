@@ -1,13 +1,7 @@
-package com.example.demo.controller;
+package com.example.demo.democode.controller;
 
-import com.example.demo.domain.User;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author lizhenjiang

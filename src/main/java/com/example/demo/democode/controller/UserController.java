@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.example.demo.democode.controller;
 
-import com.example.demo.domain.Student;
-import com.example.demo.service.StudentService;
+import com.example.demo.democode.entity.Student;
+import com.example.demo.democode.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
