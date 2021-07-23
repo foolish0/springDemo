@@ -12,6 +12,9 @@ import java.sql.Types;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author lizhenjiang
+ */
 @Repository("StudentDao")
 public class StudentDaoImp implements StudentDao {
 
