@@ -2,13 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.democode.entity.User">
     <resultMap id="BaseResultMap" type="com.example.demo.democode.entity.User">
-        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="username" jdbcType="VARCHAR" property="username"/>
         <result column="password" jdbcType="VARCHAR" property="password"/>
-        <result column="failtimes" jdbcType="INTEGER" property="failtimes"/>
-        <result column="locked_flag" jdbcType="BOOLEAN" property="lockedflag"/>
-        <result column="locked_date" jdbcType="TIMESTAMP" property="lockedtime"/>
+        <result column="fail_times" jdbcType="INTEGER" property="failTimes"/>
+        <result column="locked_flag" jdbcType="BOOLEAN" property="lockedFlag"/>
+        <result column="locked_time" jdbcType="TIMESTAMP" property="lockedTime"/>
     </resultMap>
+
+    <sql id="Base_Column_List">
+
+    </sql>
 
     <!--用户登录验证-->
     <select id="userlogin" parameterType="com.example.demo.democode.entity.User" resultType="Integer">

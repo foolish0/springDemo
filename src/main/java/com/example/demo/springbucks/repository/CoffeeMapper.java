@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Mapper
 public interface CoffeeMapper {
-    List<Coffee> findCoffeeByName(@Param("coffeeName") String name);
+    List<Coffee> findCoffeeByName(@Param("coffeeName") String coffeeName);
 
-    Integer saveCoffee(List<Coffee> coffees);
+    Integer saveCoffee(@Param("coffees") List<Coffee> coffees);
 }

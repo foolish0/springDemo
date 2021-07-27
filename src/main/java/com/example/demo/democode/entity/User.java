@@ -6,9 +6,9 @@ public class User {
     private String id;
     private String name;
     private String password;
-    private Integer failtimes;
-    private Boolean lockedflag;
-    private Timestamp lockedtime;
+    private Integer failTimes;
+    private Boolean lockedFlag;
+    private Timestamp lockedTime;
 
     public User(){}
 
@@ -29,16 +29,16 @@ public class User {
         return password;
     }
 
-    public Boolean getLockedflag() {
-        return lockedflag;
+    public Boolean getLockedFlag() {
+        return lockedFlag;
     }
 
-    public Integer getFailtimes() {
-        return failtimes;
+    public Integer getFailTimes() {
+        return failTimes;
     }
 
-    public Timestamp getLockedtime() {
-        return lockedtime;
+    public Timestamp getLockedTime() {
+        return lockedTime;
     }
 
     public void setId(String id) {
@@ -53,15 +53,15 @@ public class User {
         this.password = password;
     }
 
-    public void setFailtimes(Integer failtimes) {
-        this.failtimes = failtimes;
+    public void setFailTimes(Integer failTimes) {
+        this.failTimes = failTimes;
     }
 
-    public void setLockedflag(Boolean lockedflag) {
-        this.lockedflag = lockedflag;
+    public void setLockedFlag(Boolean lockedFlag) {
+        this.lockedFlag = lockedFlag;
     }
 
-    public void setLockedtime(Timestamp lockedtime) {
-        this.lockedtime = lockedtime;
+    public void setLockedTime(Timestamp lockedTime) {
+        this.lockedTime = lockedTime;
     }
 }

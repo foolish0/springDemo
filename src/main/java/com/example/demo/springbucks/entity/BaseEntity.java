@@ -20,7 +20,7 @@ import java.util.Date;
 public class BaseEntity implements Serializable {
     @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     @Column(updatable = false)
     @CreationTimestamp
     private Date createTime;

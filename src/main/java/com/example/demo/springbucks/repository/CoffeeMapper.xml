@@ -2,22 +2,29 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.springbucks.repository.CoffeeMapper">
     <resultMap id="coffee" type="com.example.demo.springbucks.entity.Coffee">
-        <id column="id" property="id" javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <id column="id" property="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
         <result column="name" property="name" javaType="java.lang.String" jdbcType="VARCHAR"/>
-        <result column="price" property="price" jdbcType="NUMERIC"/>
-        <result column="create_time" property="createTime" javaType="java.util.Date" jdbcType="DATE"/>
-        <result column="update_time" property="updateTime" javaType="java.util.Date" jdbcType="DATE"/>
+        <result column="price" property="price" javaType="org.joda.money.Money" jdbcType="BIGINT" typeHandler="com.example.demo.springbucks.typehandler.MoneyTypeHandler"/>
+        <result column="create_time" property="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
     </resultMap>
 
-    <select id="findCoffeeByName" resultType="java.util.List" parameterType="java.lang.String">
+    <select id="findCoffeeByName" resultMap="coffee" parameterType="java.lang.String">
         select id, name, price from t_menu where name = #{coffeeName}
     </select>
 
     <insert id="saveCoffee" parameterType="com.example.demo.springbucks.entity.Coffee">
-        insert into t_menu(name, price) values
-        <foreach collection="coffees" open="(" item="coffee" close=")">
-            #{coffee.name}, #{coffee.price}
+        insert into t_menu(name, price, create_time, update_time) values
+        <foreach collection="coffees" item="coffee" separator=",">
+            (
+                #{coffee.name},
+                #{coffee.price, typeHandler=com.example.demo.springbucks.typehandler.MoneyTypeHandler},
+                now(),
+                now()
+            )
         </foreach>
+        on duplicate key update
+        update_time = now()
     </insert>
 
 </mapper>
