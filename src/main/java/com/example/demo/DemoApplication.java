@@ -31,7 +31,7 @@ import java.util.List;
 @SpringBootApplication
 @Slf4j
 public class DemoApplication implements ApplicationRunner {
-//    @Autowired
+    //    @Autowired
 //    private CoffeeRepository coffeeRepository;
 //    @Autowired
 //    private CoffeeOrderRepository coffeeOrderRepository;
@@ -55,7 +55,7 @@ public class DemoApplication implements ApplicationRunner {
         Coffee latte = initCoffee("latte", 20.0);
         coffees.add(latte);
         Integer number = coffeeMapper.saveCoffee(coffees);
-        log.info("Save Coffee with Mybatis: succeed: {}, failed: {}", number, coffees.size()-number);
+        log.info("Save Coffee with Mybatis: succeed: {}, failed: {}", number, coffees.size() - number);
 
         List<Coffee> coffeeInfo = coffeeMapper.findCoffeeByName("latte");
         log.info("Query Coffee with Mybatis: {}", coffeeInfo);
