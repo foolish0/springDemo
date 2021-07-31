@@ -13,7 +13,7 @@ import java.util.Map;
  * @author lizhenjiang
  */
 @Service("StudentService")
-public class StudentServiceImp implements StudentService {
+public class StudentServiceImpl implements StudentService {
 
     @Autowired
     private StudentDao studentDao;

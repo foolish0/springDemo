@@ -2,20 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.democode.entity.User">
     <resultMap id="BaseResultMap" type="com.example.demo.democode.entity.User">
-        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="username" jdbcType="VARCHAR" property="username"/>
         <result column="password" jdbcType="VARCHAR" property="password"/>
-        <result column="failtimes" jdbcType="INT" property="failtimes"/>
-        <result column="locked_flag" jdbcType="BOOLEAN" property="lockedflag"/>
-        <result column="locked_date" jdbcType="TIMESTAMP" property="lockedtime"/>
+        <result column="fail_times" jdbcType="INTEGER" property="failTimes"/>
+        <result column="locked_flag" jdbcType="BOOLEAN" property="lockedFlag"/>
+        <result column="locked_time" jdbcType="TIMESTAMP" property="lockedTime"/>
     </resultMap>
+
+    <sql id="Base_Column_List">
+
+    </sql>
 
     <!--用户登录验证-->
     <select id="userlogin" parameterType="com.example.demo.democode.entity.User" resultType="Integer">
         SELECT count(1) FROM user_login WHERE username = #{username} AND password = #{password}
     </select>
     <!--用户注册-->
-    <insert id="register"  parameterType="com.example.mybatis.entity.User">
+    <insert id="register"  parameterType="com.example.demo.democode.entity.User">
         INSERT INTO user (username,password) VALUES (#{username},#{password})
     </insert>
 
@@ -30,13 +34,13 @@
     delete from user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-    <insert id="insert" parameterType="com.example.mybatis.entity.User">
+    <insert id="insert" parameterType="com.example.demo.democode.entity.User">
     insert into user (id, username, password
       )
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
       )
   </insert>
-    <insert id="insertSelective" parameterType="com.example.mybatis.entity.User">
+    <insert id="insertSelective" parameterType="com.example.demo.democode.entity.User">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -61,7 +65,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.example.mybatis.entity.User">
+    <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.democode.entity.User">
         update user
         <set>
             <if test="username != null">
@@ -73,7 +77,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.example.mybatis.entity.User">
+    <update id="updateByPrimaryKey" parameterType="com.example.demo.democode.entity.User">
     update user
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR}

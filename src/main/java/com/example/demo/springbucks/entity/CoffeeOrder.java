@@ -13,8 +13,8 @@ import java.util.List;
  * @author lizhenjiang
  */
 @EqualsAndHashCode(callSuper = true)
-@Entity
-@Table(name = "T_Order")
+//@Entity
+//@Table(name = "T_Order")
 @Data
 @ToString(callSuper = true)
 @NoArgsConstructor
@@ -24,8 +24,8 @@ public class CoffeeOrder extends BaseEntity implements Serializable{
 
     private String customer;
 
-    @ManyToMany
-    @JoinTable(name = "T_ORDER_COFFEE")
+//    @ManyToMany
+//    @JoinTable(name = "T_ORDER_COFFEE")
     private List<Coffee> items;
 
     @Column(nullable = false)
