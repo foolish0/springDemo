@@ -19,6 +19,13 @@
     </properties>
 
     <dependencies>
+        <!-- spring-boot-loader 用于源码分析 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-loader</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
