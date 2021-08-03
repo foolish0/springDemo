@@ -20,13 +20,13 @@ public class JavaClassLoaderPrint {
         }
 
         // 扩展类加载器
-        pringClassLoader("扩展类加载器", JavaClassLoaderPrint.class.getClassLoader().getParent());
+        printClassLoader("扩展类加载器", JavaClassLoaderPrint.class.getClassLoader().getParent());
 
         // 应用类加载器
-        pringClassLoader("应用类加载器", JavaClassLoaderPrint.class.getClassLoader());
+        printClassLoader("应用类加载器", JavaClassLoaderPrint.class.getClassLoader());
     }
 
-    private static void pringClassLoader(String name, ClassLoader classLoader) {
+    private static void printClassLoader(String name, ClassLoader classLoader) {
         if (null != classLoader) {
             System.out.println(name + "ClassLoader ->" + classLoader.toString());
             printUrlForClassLoader(classLoader);
