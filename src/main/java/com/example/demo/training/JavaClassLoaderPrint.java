@@ -24,6 +24,9 @@ public class JavaClassLoaderPrint {
 
         // 应用类加载器
         printClassLoader("应用类加载器", JavaClassLoaderPrint.class.getClassLoader());
+
+        // 自定义类加载器
+        printClassLoader("自定义类加载器", MyClassLoader.class.getClassLoader());
     }
 
     private static void printClassLoader(String name, ClassLoader classLoader) {
