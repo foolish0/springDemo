@@ -23,7 +23,7 @@ public class StudentDaoImp implements StudentDao {
 
     @Override
     public int add(Student student) {
-        String sql = "insert into students(sno,sname,ssex,sbirthday,class) values(?,?,?,?,?)";
+        String sql = "insert into student(sno,sname,ssex,sbirthday,class) values(?,?,?,?,?)";
         Object[] args = {student.getSno(), student.getSname(), student.getSsex(), student.getSbirthday(), student.getClassno()};
         int[] argTypes = {Types.VARCHAR, Types.VARCHAR, Types.VARCHAR, Types.DATE, Types.VARCHAR};
         return this.jdbcTemplate.update(sql, args, argTypes);
@@ -34,7 +34,7 @@ public class StudentDaoImp implements StudentDao {
 
     @Override
     public int deleteBysno(String sno) {
-        String sql = "delete from students where sno = ?";
+        String sql = "delete from student where sno = ?";
         Object[] args = {sno};
         int[] argTypes = {Types.VARCHAR};
         return this.jdbcTemplate.update(sql, args, argTypes);
@@ -42,7 +42,7 @@ public class StudentDaoImp implements StudentDao {
 
     @Override
     public int update(Student student) {
-        String sql = "update students set sname = ?,ssex = ? where sno = ?";
+        String sql = "update student set sname = ?,ssex = ? where sno = ?";
         Object[] args = {student.getSname(), student.getSsex(), student.getSno()};
         int[] argTypes = {Types.VARCHAR, Types.VARCHAR, Types.VARCHAR};
         return this.jdbcTemplate.update(sql, args, argTypes);
@@ -50,7 +50,7 @@ public class StudentDaoImp implements StudentDao {
 
     @Override
     public Map<String, Object> queryStudentBysno(String sno) {
-        String sql = "select * from students where sno = ?";
+        String sql = "select * from student where sno = ?";
         Object[] args = {sno};
         int[] argTypes = {Types.VARCHAR};
         //return this.jdbcTemplate.query(sql, args, argTypes,);
@@ -64,7 +64,7 @@ public class StudentDaoImp implements StudentDao {
 
     @Override
     public List<Map<String, Object>> queryStudentListMap() {
-        String sql = "select * from students";
+        String sql = "select * from student";
         return this.jdbcTemplate.queryForList(sql);
     }
 }

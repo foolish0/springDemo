@@ -4,8 +4,6 @@ import com.example.demo.springbucks.entity.Coffee;
 import com.example.demo.springbucks.entity.CoffeeOrder;
 import com.example.demo.springbucks.entity.OrderState;
 import com.example.demo.springbucks.repository.CoffeeMapper;
-import com.example.demo.springbucks.repository.CoffeeOrderRepository;
-import com.example.demo.springbucks.repository.CoffeeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.util.Lists;
 import org.joda.money.CurrencyUnit;
@@ -15,8 +13,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -30,6 +27,7 @@ import java.util.List;
 //@EnableHasorWeb()
 @SpringBootApplication
 @Slf4j
+@EnableAsync
 public class DemoApplication implements ApplicationRunner {
     //    @Autowired
 //    private CoffeeRepository coffeeRepository;

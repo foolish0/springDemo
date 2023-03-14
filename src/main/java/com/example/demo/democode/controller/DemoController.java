@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author lizhenjiang
  */
 @RestController
-@RequestMapping("/demo")
+@RequestMapping("/api")
 public class DemoController {
 
     @RequestMapping("/index")

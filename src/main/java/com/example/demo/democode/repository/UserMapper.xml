@@ -3,7 +3,7 @@
 <mapper namespace="com.example.demo.democode.entity.User">
     <resultMap id="BaseResultMap" type="com.example.demo.democode.entity.User">
         <id column="id" jdbcType="INTEGER" property="id"/>
-        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="username" jdbcType="VARCHAR" property="name"/>
         <result column="password" jdbcType="VARCHAR" property="password"/>
         <result column="fail_times" jdbcType="INTEGER" property="failTimes"/>
         <result column="locked_flag" jdbcType="BOOLEAN" property="lockedFlag"/>
